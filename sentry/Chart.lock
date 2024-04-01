@@ -4,7 +4,7 @@ dependencies:
   version: 6.5.9
 - name: redis
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 17.11.3
+  version: 19.0.2
 - name: kafka
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 23.0.7
@@ -23,5 +23,5 @@ dependencies:
 - name: nginx
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 14.2.2
-digest: sha256:1efe56211a485ac6f6e7e24b1dec64beac3e13fc47f2ec3919f6a11df7f24e3a
-generated: "2023-12-22T11:35:21.369627+09:00"
+digest: sha256:f0c424e082d7da962456b1c334a256b557414a5a8bfef4c27da5aecb1b6ad55b
+generated: "2024-04-01T10:07:12.576356864Z"
