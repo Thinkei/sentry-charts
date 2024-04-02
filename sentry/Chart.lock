@@ -13,7 +13,7 @@ dependencies:
   version: 3.7.0
 - name: zookeeper
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 11.4.11
+  version: 13.1.0
 - name: rabbitmq
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 11.16.2
@@ -23,5 +23,5 @@ dependencies:
 - name: nginx
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 14.2.2
-digest: sha256:1efe56211a485ac6f6e7e24b1dec64beac3e13fc47f2ec3919f6a11df7f24e3a
-generated: "2023-12-22T11:35:21.369627+09:00"
+digest: sha256:c43660205962b198cd46dc0c5fc9043232548f90d64771e85b4b081e8a3e829c
+generated: "2024-04-02T11:23:00.518576732Z"
