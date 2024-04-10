@@ -100,7 +100,7 @@ spec:
             configMap:
               name: {{ template "sentry.fullname" . }}-sentry
           - name: sentry-data
-          {{- if and (eq .Values.filestore.backend "filesystem") .Values.filestore.filesystem.persistence.enabled (.Values.filestore.filesystem.persistence.persistentWorkers) }}
+          {{- if and (eq .Values.filestore.backend "filesystem") .Values.filestore.filesystem.persistence.enabled (or .Values.filestore.filesystem.persistence.persistentWorkers .Values.sentry.cleanup.persistentVolume) }}
             persistentVolumeClaim:
               claimName: {{ template "sentry.fullname" . }}-data
           {{- else }}
