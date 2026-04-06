@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           path: 'main'
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           path: 'gh-pages'
 
@@ -26,22 +26,22 @@ jobs:
           git checkout gh-pages
 
       - name: Build clickhouse chart
-        uses: WyriHaximus/github-action-helm3@v4
+        uses: WyriHaximus/github-action-helm3@e3894d973c282349e3d41d3347767f2b2545b583 # v4
         with:
           exec: helm package -u main/charts/clickhouse --destination gh-pages/charts
 
       - name: Build sentry chart
-        uses: WyriHaximus/github-action-helm3@v4
+        uses: WyriHaximus/github-action-helm3@e3894d973c282349e3d41d3347767f2b2545b583 # v4
         with:
           exec: helm package -u main/charts/sentry --destination gh-pages/charts
 
       - name: Build sentry-kubernetes chart
-        uses: WyriHaximus/github-action-helm3@v4
+        uses: WyriHaximus/github-action-helm3@e3894d973c282349e3d41d3347767f2b2545b583 # v4
         with:
           exec: helm package -u main/charts/sentry-kubernetes --destination gh-pages/charts
 
       - name: Build sentry-kubernetes chart
-        uses: WyriHaximus/github-action-helm3@v4
+        uses: WyriHaximus/github-action-helm3@e3894d973c282349e3d41d3347767f2b2545b583 # v4
         with:
           exec: helm repo index --url https://sentry-kubernetes.github.io/charts ./gh-pages/charts
 
@@ -59,7 +59,7 @@ jobs:
           directory: gh-pages
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@45b43ab25725682861f953edbb911fe7f402a5b6 # v2
         env:
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           PUBLISH_BRANCH: gh-pages
